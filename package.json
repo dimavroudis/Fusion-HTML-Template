@@ -1,0 +1,25 @@
+{
+  "name": "stonewave",
+  "version": "1.0.0",
+  "main": "js/main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch:scss": "node-sass --watch scss -o ./",
+    "build:css": "node-sass scss -o ./",
+    "build:js": "browserify js/main.js -o bundle.js",
+    "build": "npm run build:js & npm run build:css"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "@glidejs/glide": "^3.2.6",
+    "micromodal": "^0.3.2",
+    "normalize.css": "^8.0.1"
+  },
+  "devDependencies": {
+    "browserify": "^16.2.3",
+    "node-sass": "^4.11.0",
+    "sass": "^1.17.2"
+  },
+  "description": ""
+}
