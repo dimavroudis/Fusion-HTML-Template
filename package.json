@@ -4,10 +4,9 @@
   "main": "js/main.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "watch:scss": "node-sass --watch scss -o ./",
-    "build:css": "node-sass scss -o ./",
-    "build:js": "browserify js/main.js -o bundle.js",
-    "build": "npm run build:js & npm run build:css"
+    "build:css": "gulp buildCss",
+    "build:js": "gulp buildJs",
+    "build": "gulp default"
   },
   "author": "",
   "license": "ISC",
@@ -18,8 +17,14 @@
   },
   "devDependencies": {
     "browserify": "^16.2.3",
+    "gulp": "^4.0.0",
+    "gulp-browserify": "^0.5.1",
+    "gulp-concat": "^2.6.1",
+    "gulp-rename": "^1.4.0",
+    "gulp-sass": "^4.0.2",
     "node-sass": "^4.11.0",
-    "sass": "^1.17.2"
+    "sass": "^1.17.2",
+    "vinyl-source-stream": "^2.0.0"
   },
   "description": ""
 }

@@ -37,7 +37,6 @@ var MicroModal = require('../node_modules/micromodal/dist/micromodal.min.js');
         });
     });
 
-
     teams.forEach(elem => {
         elem.addEventListener("click", () => {
             elem.classList.toggle('team-member--active');
