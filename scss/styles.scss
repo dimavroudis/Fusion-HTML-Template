@@ -57,9 +57,13 @@ h4 {
   margin-top: 0;
 }
 
-a {
+a{
   text-decoration: none;
   color: #fff;
+}
+
+a, button{
+  cursor: pointer;
 }
 
 .link {
@@ -168,7 +172,6 @@ a {
 .btn-primary {
   background: $primary-color;
   color: $dark-background;
-  cursor: pointer;
 
   &:hover {
     background-color: #f5951a;
@@ -185,13 +188,16 @@ a {
   color: $primary-color;
 }
 
-section {
+.section {
   position: relative;
-  padding: 120px 0;
 
   &.section-titled {
     padding-top: 0;
+    .fp-tableCell {
+      vertical-align: top;
+    }
   }
+
 }
 
 .section-title, .section-subtitle {
@@ -250,7 +256,15 @@ section {
 .container {
   max-width: $body-width;
   margin: 0 auto;
-  display: flex;
+  padding: 30px 0;
+
+  &--full-page{
+    padding: 120px 0;
+  }
+
+  &:last-child{
+    padding-bottom: 120px;
+  }
 }
 
 @media only screen and (max-width: 1140px) {
@@ -258,6 +272,10 @@ section {
     padding-right: 1rem;
     padding-left: 1rem;
   }
+}
+
+.fp-scroller {
+  transition-duration: 800ms !important;
 }
 
 
@@ -271,17 +289,25 @@ section {
 
 .container-hero {
   max-width: $inner-width;
-  min-height: calc(100vh - 75px);
+  display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
-.container-hero-footer {
-  min-height: 45px;
-  justify-content: space-between;
-  align-items: center;
-}
+.hero-footer {
+  position: absolute;
+  bottom: 30px;
+  width: 100%;
 
+  .container-hero-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0;
+    margin-bottom: 30px;
+  }
+
+}
 .hero-box {
   background: none;
   border: 0;
@@ -384,15 +410,25 @@ section {
 }
 
 .hero-scroll-arrow {
-  width: 14px;
-  height: 8px;
   position: absolute;
   top: 80%;
   left: 50%;
-  margin: -4px 0 0 -7px;
+  width: 30px;
+  height: 60px;
+  margin: -30px 0 0 -15px;
+  border: 0;
+  outline: 0;
+  background: transparent;
   text-align: center;
-  animation: float 4s ease-in-out infinite;
-  will-change: transform;
+  .arrow-down{
+    width: 14px;
+    height: 7px;
+    display: inline-block;
+    background-image: url(../images/arrow-down.png);
+    animation: float 4s ease-in-out infinite;
+    will-change: transform;
+  }
+
 }
 
 @keyframes float {
@@ -414,6 +450,7 @@ section {
 }
 
 .container-services {
+  display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
   align-items: center;
@@ -426,10 +463,6 @@ section {
 }
 
 /* Project Section */
-
-.container-slideshow {
-  display: block;
-}
 
 .project-slide {
   display: grid;
@@ -503,6 +536,7 @@ section {
 }
 
 .container-brands {
+  display: flex;
   justify-content: space-between;
   align-items: center;
   flex-wrap: wrap;
@@ -519,7 +553,6 @@ section {
 
 .container-testimonials {
   max-width: $inner-width;
-
 }
 
 .testimonial-slide {
@@ -575,6 +608,7 @@ section {
 }
 
 .team-member {
+  position: relative;
   display: grid;
   grid-template-columns: 68px 1fr;
   grid-template-rows: 1fr;
@@ -598,8 +632,20 @@ section {
   &:nth-child(4n+1) {
     border-left-width: 0;
   }
-
+  &:before {
+    content: "";
+    width: 0px;
+    height: 0px;
+    border: 1px solid transparent;
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
   &--active {
+    &:before{
+      animation: cornerUp .5s cubic-bezier(0.0, 0.0, 0.2, 1)  forwards;
+    }
     .team-member-basic {
       grid-column-start: 1;
       grid-column-end: 2;
@@ -611,7 +657,6 @@ section {
       width: 68px;
       height: 68px;
       margin-bottom: 2rem;
-      border-color: $primary-color;
 
       img {
         width: 48px;
@@ -652,9 +697,6 @@ section {
   align-items: center;
   justify-content: center;
   margin-bottom: 2rem;
-  border-color: transparent;
-  border-width: 1px 0 0 1px;
-  border-style: solid;
 
   img {
     width: 120px;
@@ -701,6 +743,8 @@ section {
 }
 
 .container-footer {
+  display: flex;
+  margin-top: 120px;
   justify-content: space-between;
 }
 
@@ -918,6 +962,35 @@ section {
 .modal-project .modal--overlay {
   will-change: transform;
 }
+
+.modal-box:before {
+  content: "";
+  width: 0px;
+  height: 0px;
+  border: 1px solid transparent;
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.modal-project.is-open .modal-box:before{
+  animation: cornerUp .5s cubic-bezier(0.0, 0.0, 0.2, 1) .3s forwards;
+}
+
+@keyframes cornerUp {
+  from {
+    width: 0px;
+    height: 0px;
+  }
+  to {
+    border-top-color:$primary-color;
+    border-left-color:$primary-color;
+    width: 60px;
+    height: 60px;
+  }
+}
+
 
 @media only screen and (max-width: 1140px) {
   .modal-box{

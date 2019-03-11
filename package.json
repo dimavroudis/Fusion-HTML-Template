@@ -12,6 +12,7 @@
   "license": "ISC",
   "dependencies": {
     "@glidejs/glide": "^3.2.6",
+    "fullpage.js": "^3.0.4",
     "micromodal": "^0.3.2",
     "normalize.css": "^8.0.1"
   },

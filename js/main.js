@@ -2,6 +2,9 @@ var glidejs = require('../node_modules/@glidejs/glide/dist/glide.min.js');
 
 var MicroModal = require('../node_modules/micromodal/dist/micromodal.min.js');
 
+var scrolloverflow = require('../node_modules/fullpage.js/vendors/scrolloverflow.min.js');
+var fullPage = require('../node_modules/fullpage.js/dist/fullpage.js');
+
 (function() {
 
     var inputs = document.querySelectorAll('.form-field input, .form-field textarea');
@@ -57,8 +60,16 @@ var MicroModal = require('../node_modules/micromodal/dist/micromodal.min.js');
     var projects = new glidejs('#glideProjects').mount();
     var testimonials = new glidejs('#glideTestimonials').mount();
 
-    MicroModal.init();
+    var scrolling = new fullPage('#main', {
+        scrollOverflow: true
+    });
 
+    var moveDown = document.getElementById('moveDown');
+    moveDown.addEventListener('click', function(){
+        fullpage_api.moveSectionDown();
+    });
+
+    MicroModal.init();
 
     function projectSlider(entries) {
         entries.forEach(function (entry) {

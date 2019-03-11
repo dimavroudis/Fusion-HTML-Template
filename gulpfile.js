@@ -15,7 +15,7 @@ function buildSass() {
 };
 
 function buildCssVendor() {
-    return src(['node_modules/normalize.css/normalize.css', 'node_modules/@glidejs/glide/dist/css/glide.core.min.css'])
+    return src(['node_modules/normalize.css/normalize.css', 'node_modules/@glidejs/glide/dist/css/glide.core.min.css', 'node_modules/fullpage.js/dist/fullpage.min.css'])
         .pipe(concat('css/vendor.css'))
         .pipe(dest('./'));
 };
