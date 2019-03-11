@@ -52,14 +52,14 @@ a {
     white-space: nowrap;
     cursor: pointer; }
   .link-arrow-right a::after, .link-arrow-right span::after {
-    content: url("./images/arrow.png");
+    content: url("../images/arrow.png");
     display: inline-block;
     margin-left: 6px;
     transition: transform 400ms ease-out; }
   .link-arrow-right a:hover::after, .link-arrow-right a:focus::after, .link-arrow-right span:hover::after, .link-arrow-right span:focus::after {
     transform: translateX(6px); }
   .link-arrow-left a::before, .link-arrow-left span::before {
-    content: url("./images/arrow.png");
+    content: url("../images/arrow.png");
     display: inline-block;
     margin-right: 6px;
     transform: translateX(0) rotate(180deg);
@@ -117,7 +117,7 @@ a {
     background-color: #f5951a; }
 
 .btn-arrow span:after {
-  content: url("./images/arrow-black.png");
+  content: url("../images/arrow-black.png");
   margin-left: 8px; }
 
 .text-primary {
@@ -184,7 +184,7 @@ section {
 
 /* Hero Section */
 .section-hero {
-  background-image: url(./images/hero-background.png);
+  background-image: url(../images/hero-background.png);
   background-size: cover;
   padding: 0 0 30px; }
 
@@ -319,7 +319,7 @@ section {
 .project-title {
   margin-top: 0;
   text-transform: capitalize;
-  text-shadow: 0px 0px 10px rgba(24, 24, 24, 0.5); }
+  text-shadow: 0 0 10px rgba(24, 24, 24, 0.5); }
 
 .project-image {
   grid-column-start: 1;
@@ -372,7 +372,7 @@ section {
 .testimonial-slide {
   padding: 0 70px 40px;
   background-color: #181818;
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
   text-align: center; }
 
 .testimonial-image {
@@ -510,7 +510,7 @@ section {
   width: 100%;
   padding: 54px;
   background-color: #181818;
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3); }
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3); }
   .contact-form .form-field-row {
     display: flex;
     flex-wrap: wrap; }

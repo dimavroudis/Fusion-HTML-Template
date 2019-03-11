@@ -76,7 +76,7 @@ a {
   &-arrow-right {
     a, span {
       &::after {
-        content: url("./images/arrow.png");
+        content: url("../images/arrow.png");
         display: inline-block;
         margin-left: 6px;
         transition: transform 400ms ease-out;
@@ -93,7 +93,7 @@ a {
   &-arrow-left {
     a, span {
       &::before {
-        content: url("./images/arrow.png");
+        content: url("../images/arrow.png");
         display: inline-block;
         margin-right: 6px;
         transform: translateX(0) rotate(180deg);
@@ -176,7 +176,7 @@ a {
 }
 
 .btn-arrow span:after {
-  content: url("./images/arrow-black.png");
+  content: url("../images/arrow-black.png");
   margin-left: 8px;
 }
 
@@ -264,7 +264,7 @@ section {
 /* Hero Section */
 
 .section-hero {
-  background-image: url(./images/hero-background.png);
+  background-image: url(../images/hero-background.png);
   background-size: cover;
   padding: 0 0 30px;
 }
@@ -457,7 +457,7 @@ section {
 .project-title {
   margin-top: 0;
   text-transform: capitalize;
-  text-shadow: 0px 0px 10px rgba(24, 24, 24, 0.5);
+  text-shadow: 0 0 10px rgba(24, 24, 24, 0.5);
 }
 
 .project-image {
@@ -525,7 +525,7 @@ section {
 .testimonial-slide {
   padding: 0 70px 40px;
   background-color: $dark-background;
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
   text-align: center;
 }
 
@@ -708,7 +708,7 @@ section {
   width: 100%;
   padding: 54px;
   background-color: $dark-background;
-  box-shadow: 0px 5px 15px 0px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);
 
   .form-field-row {
     display: flex;
