@@ -642,7 +642,7 @@ a, button{
     top: 0;
     left: 0;
   }
-  &--active {
+  &:hover {
     &:before{
       animation: cornerUp .5s cubic-bezier(0.0, 0.0, 0.2, 1)  forwards;
     }
@@ -700,12 +700,12 @@ a, button{
 
   img {
     width: 120px;
-    transition: width 300ms ease-in-out;
+    transition: width .3s ease-in-out;
   }
 }
 
 .team-member-details {
-  transition: transform 200ms ease-out;
+  transition: transform .3s ease-out;
 }
 
 .team-member-name {
@@ -724,7 +724,7 @@ a, button{
   opacity: 0;
   overflow: hidden;
   text-align: left;
-  transition: opacity 300ms ease-in-out;
+  transition: opacity 300ms ease-in-out 100ms;
 
   p {
     font-size: 13px;
@@ -749,7 +749,6 @@ a, button{
 }
 
 .contact-form {
-  width: 100%;
   padding: 54px;
   background-color: $dark-background;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3);

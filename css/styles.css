@@ -461,25 +461,25 @@ a, button {
     position: absolute;
     top: 0;
     left: 0; }
-  .team-member--active:before {
+  .team-member:hover:before {
     animation: cornerUp 0.5s cubic-bezier(0, 0, 0.2, 1) forwards; }
-  .team-member--active .team-member-basic {
+  .team-member:hover .team-member-basic {
     grid-column-start: 1;
     grid-column-end: 2;
     justify-content: start;
     align-self: start; }
-  .team-member--active .team-member-avatar {
+  .team-member:hover .team-member-avatar {
     width: 68px;
     height: 68px;
     margin-bottom: 2rem; }
-    .team-member--active .team-member-avatar img {
+    .team-member:hover .team-member-avatar img {
       width: 48px;
       transition: none; }
-  .team-member--active .team-member-details {
+  .team-member:hover .team-member-details {
     transform: rotate(90deg);
     white-space: nowrap;
     text-align: left; }
-  .team-member--active .team-member-text {
+  .team-member:hover .team-member-text {
     display: block;
     height: inherit;
     grid-column-start: 2;
@@ -503,10 +503,10 @@ a, button {
   margin-bottom: 2rem; }
   .team-member-avatar img {
     width: 120px;
-    transition: width 300ms ease-in-out; }
+    transition: width .3s ease-in-out; }
 
 .team-member-details {
-  transition: transform 200ms ease-out; }
+  transition: transform .3s ease-out; }
 
 .team-member-name {
   margin-bottom: 0.75rem;
@@ -522,7 +522,7 @@ a, button {
   opacity: 0;
   overflow: hidden;
   text-align: left;
-  transition: opacity 300ms ease-in-out; }
+  transition: opacity 300ms ease-in-out 100ms; }
   .team-member-text p {
     font-size: 13px;
     padding: 0.6rem 1rem; }
@@ -540,7 +540,6 @@ a, button {
   justify-content: space-between; }
 
 .contact-form {
-  width: 100%;
   padding: 54px;
   background-color: #181818;
   box-shadow: 0 5px 15px 0 rgba(0, 0, 0, 0.3); }
