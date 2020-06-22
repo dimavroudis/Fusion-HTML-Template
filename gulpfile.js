@@ -2,9 +2,7 @@ const { watch, series, parallel, src, dest } = require('gulp');
 const concat = require('gulp-concat');
 const sass = require('gulp-sass');
 const browserify = require('browserify');
-const rename = require('gulp-rename');
 const source     = require('vinyl-source-stream');
-
 
 sass.compiler = require('node-sass');
 
@@ -15,7 +13,7 @@ function buildSass() {
 };
 
 function buildCssVendor() {
-    return src(['node_modules/normalize.css/normalize.css', 'node_modules/@glidejs/glide/dist/css/glide.core.min.css', 'node_modules/fullpage.js/dist/fullpage.min.css'])
+    return src(['node_modules/normalize.css/normalize.css', 'node_modules/@glidejs/glide/dist/css/glide.core.min.css'])
         .pipe(concat('css/vendor.css'))
         .pipe(dest('./'));
 };
