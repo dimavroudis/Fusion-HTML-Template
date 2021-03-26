@@ -1,9 +1,8 @@
 {
     "name": "stonewave",
-    "version": "1.0.0",
+    "version": "1.1.0",
     "main": "js/main.js",
     "scripts": {
-        "test": "echo \"Error: no test specified\" && exit 1",
         "build:css": "gulp buildCss",
         "build:js": "gulp buildJs",
         "build": "gulp default"
@@ -12,16 +11,16 @@
     "license": "ISC",
     "dependencies": {
         "@glidejs/glide": "^3.4.1",
-        "micromodal": "^0.3.2",
+        "micromodal": "^0.4.6",
         "normalize.css": "^8.0.1"
     },
     "devDependencies": {
-        "browserify": "^16.5.1",
+        "browserify": "^17.0.0",
         "gulp": "^4.0.2",
         "gulp-concat": "^2.6.1",
         "gulp-sass": "^4.1.0",
-        "node-sass": "^4.14.1",
-        "sass": "^1.26.8",
+        "node-sass": "^5.0.0",
+        "sass": "^1.32.8",
         "vinyl-source-stream": "^2.0.0"
     },
     "description": ""
